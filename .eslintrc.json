@@ -17,8 +17,20 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "react",
+        "jsx-a11y",
+        "optimize-regex",
+        "sonarjs",
+        "promise",
+        "node"
     ],
     "rules": {
+        "allowTernary": true,
+        "optimize-regex/optimize-regex": "warn",
+        "sonarjs/cognitive-complexity": [
+            "error",
+            30
+        ]
     }
 }
