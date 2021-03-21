@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "./node_modules/.bin/eslint --init"
+    "lint": "./node_modules/.bin/eslint --init",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "precommit": "lint-staged",
+    "eslint": "node_modules/.bin/eslint src/"
   },
   "repository": {
     "type": "git",
@@ -35,6 +39,17 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-sonarjs": "^0.6.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "react": "^17.0.1"
+  },
+  "lint-staged": {
+    "*.{js, jsx}": [
+      "node_modules/.bin/eslint --max-warnings=0",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "typescript": "^4.2.3"
   }
 }

@@ -4,6 +4,7 @@
         "commonjs": true,
         "es2021": true
     },
+    "root":true,
     "extends": [
         "plugin:react/recommended",
         "airbnb"
@@ -26,11 +27,6 @@
         "node"
     ],
     "rules": {
-        "allowTernary": true,
-        "optimize-regex/optimize-regex": "warn",
-        "sonarjs/cognitive-complexity": [
-            "error",
-            30
-        ]
+        "linebreak-style":"off"
     }
 }
